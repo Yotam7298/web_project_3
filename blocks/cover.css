@@ -1,0 +1,44 @@
+.cover {
+  background: linear-gradient(rgba(42, 44, 47, 0.3), rgba(42, 44, 47, 0.3)),
+    url(../images/cover__background.jpg);
+  position: relative;
+  margin: 92px auto 0;
+  width: 100vw;
+  min-height: 740px;
+  max-width: 1184px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.cover__title {
+  margin: 0;
+  text-align: center;
+  font-size: 72px;
+  line-height: 76px;
+}
+
+.cover__subtitle {
+  margin: 32px 0 0;
+  text-align: center;
+  font-family: Inter-Regular, sans-serif;
+}
+
+.cover__button {
+  text-decoration: none;
+  color: white;
+  font-family: Inter-Regular, sans-serif;
+  background-color: #0278fe;
+  padding: 13px 20px;
+  border-radius: 4px;
+  margin: 32px auto 0;
+}
+
+.cover__button:hover {
+  background-color: #0063d2;
+}

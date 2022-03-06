@@ -1,0 +1,10 @@
+.footer {
+  padding: 92px 0 24px;
+}
+
+.footer__copyright {
+  text-align: center;
+  font-family: Inter-Regular, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+}
