@@ -11,8 +11,14 @@
   align-items: center;
 }
 
+.cover:hover {
+  background: linear-gradient(rgba(42, 44, 47, 0.8), rgba(42, 44, 47, 0.8)),
+    url(../images/cover__background.jpg);
+}
+
 .cover__content {
   display: flex;
+  gap: 32px;
   flex-direction: column;
 }
 
@@ -24,21 +30,47 @@
 }
 
 .cover__subtitle {
-  margin: 32px 0 0;
   text-align: center;
   font-family: Inter-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
 }
 
 .cover__button {
+  width: 137px;
+  height: 48px;
+  font-size: 18px;
+  line-height: 48px;
+  text-align: center;
   text-decoration: none;
   color: white;
   font-family: Inter-Regular, sans-serif;
   background-color: #0278fe;
-  padding: 13px 20px;
   border-radius: 4px;
-  margin: 32px auto 0;
+  margin: 0 auto;
 }
 
 .cover__button:hover {
   background-color: #0063d2;
+}
+
+@media screen and (max-width: 768px) {
+  .cover {
+    margin-top: min(20vw, 92px);
+    min-height: calc(254px + 486 * ((100vw - 320px) / 448));
+  }
+
+  .cover__content {
+    gap: min(5vw, 32px);
+  }
+  .cover__title {
+    font-size: min(10vw, 72px);
+    line-height: min(10.94vw, 76px);
+  }
+
+  .cover__subtitle {
+    font-size: min(4.375vw, 18px);
+    line-height: min(5vw, 22px);
+  }
 }

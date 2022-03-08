@@ -1,5 +1,6 @@
 .footer {
-  padding: 92px 0 24px;
+  padding-top: calc(88px + 4 * ((100vw - 768px) / 512));
+  padding-bottom: 24px;
 }
 
 .footer__copyright {
@@ -7,4 +8,11 @@
   font-family: Inter-Regular, sans-serif;
   font-size: 14px;
   line-height: 16px;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__copyright {
+    line-height: calc(14px + 2 * ((100vw - 320px) / 448));
+  }
 }
