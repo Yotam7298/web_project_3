@@ -18,12 +18,11 @@
 
 .cover__content {
   display: flex;
-  gap: 32px;
   flex-direction: column;
 }
 
 .cover__title {
-  margin: 0;
+  margin: 0 0 32px;
   text-align: center;
   font-size: 72px;
   line-height: 76px;
@@ -48,10 +47,10 @@
   font-family: Inter-Regular, sans-serif;
   background-color: #0278fe;
   border-radius: 4px;
-  margin: 0 auto;
+  margin: 32px auto 0;
 }
 
-.cover__button:hover {
+.cover__button:nth-of-type(n + 2) .cover__button:hover {
   background-color: #0063d2;
 }
 
@@ -61,10 +60,8 @@
     min-height: calc(254px + 486 * ((100vw - 320px) / 448));
   }
 
-  .cover__content {
-    gap: min(5vw, 32px);
-  }
   .cover__title {
+    margin-bottom: min(5vw, 32px);
     font-size: min(10vw, 72px);
     line-height: min(10.94vw, 76px);
   }
@@ -72,5 +69,9 @@
   .cover__subtitle {
     font-size: min(4.375vw, 18px);
     line-height: min(5vw, 22px);
+  }
+
+  .cover__button {
+    margin-top: min(5vw, 32px);
   }
 }
