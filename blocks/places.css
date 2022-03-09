@@ -6,6 +6,6 @@
 @media screen and (max-width: 768px) {
   .places {
     margin: min(19.375vw, 88px) auto 0;
-    max-width: min(100vw, 720px);
+    max-width: min(100%, 720px);
   }
 }

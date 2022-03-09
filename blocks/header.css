@@ -1,7 +1,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
 }
 
 .header__lead {
@@ -28,7 +28,7 @@
 
 .header__image {
   margin: min(5vw, 64px) auto 0;
-  width: 100vw;
+  width: 100%;
   max-width: 984px;
 }
 

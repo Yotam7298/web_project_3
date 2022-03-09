@@ -3,7 +3,7 @@
     url(../images/cover__background.jpg);
   position: relative;
   margin: 92px auto 0;
-  width: 100vw;
+  width: 100%;
   min-height: 740px;
   max-width: 1184px;
   display: flex;
