@@ -70,6 +70,7 @@
   color: white;
   background-color: #0278fe;
   border-radius: 4px;
+  transition: background-color 0.3s linear;
 }
 
 .place__button:hover {
