@@ -1,18 +1,19 @@
 .footer {
-  padding-top: calc(88px + 4 * ((100vw - 768px) / 512));
+  /* padding-top: calc(88px + 4 * ((100vw - 768px) / 512)); */
   padding-bottom: 24px;
 }
 
 .footer__copyright {
   text-align: center;
-  font-family: Inter-Regular, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   line-height: 16px;
-  margin: 0;
+  margin: calc(88px + 4 * ((100vw - 768px) / 512)) 0 0;
 }
 
 @media screen and (max-width: 768px) {
   .footer__copyright {
     line-height: calc(14px + 2 * ((100vw - 320px) / 448));
+    margin-top: calc(64px + 24 * ((100vw - 320px) / 448));
   }
 }

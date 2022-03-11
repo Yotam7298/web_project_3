@@ -1,6 +1,8 @@
 .place {
   display: grid;
-  grid-template: repeat(3, auto) / 460px auto;
+  grid-template:
+    auto min(calc(340px + 120 * ((100vw - 768px) / 512)), 460px) auto /
+    fit-content(460px) auto;
   column-gap: calc(28px + 12 * ((100vw - 768px) / 512));
   row-gap: 48px;
   margin-top: calc(72px + 8 * ((100vw - 768px) / 512));
@@ -14,8 +16,10 @@
   font-size: min(5.625vw, 72px);
   line-height: min(5.99vw, 76px);
   margin: 0;
-  max-width: max(35.93vw, 340px);
+  max-width: min(35.93vw, 340px);
   text-align: left;
+  font-family: Inter, sans-serif;
+  font-weight: 900;
 }
 
 .place__artist {
@@ -26,16 +30,15 @@
 .place__name-heading {
   margin: 0 0 8px;
   font-size: 12px;
-  letter-spacing: 1px;
-  font-family: Inter-Regular, sans-serif;
+  letter-spacing: 0.12em;
   color: #aaa;
+  text-transform: capitalize;
 }
 
 .place__name {
   margin: 0;
   font-size: 18px;
   line-height: 22px;
-  font-family: Inter-Regular, sans-serif;
 }
 
 .place__image {
@@ -50,8 +53,6 @@
   margin: 25px 0 0;
   font-size: 18px;
   line-height: 1.63;
-  font-family: Inter-Regular, sans-serif;
-  font-weight: 400;
   max-width: min(45.83vw, 484px);
 }
 
@@ -62,7 +63,8 @@
 .place__button {
   width: 248px;
   height: 48px;
-  font-family: Inter-SemiBold, sans-serif;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
   font-size: 18px;
   line-height: 48px;
   text-decoration: none;
@@ -77,17 +79,26 @@
   background-color: #0063d2;
 }
 
+@media screen and (max-width: 768px) {
+  .place__paragraph {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .place {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+    gap: 30px;
   }
 
   .place__title {
     font-size: 32px;
     line-height: 35px;
+    align-self: flex-start;
+    margin-left: 16px;
   }
 
   .place__image {
@@ -96,7 +107,7 @@
 
   .place__button {
     order: 5;
-    max-width: 288px;
+    width: 288px;
   }
 
   .place__paragraph {

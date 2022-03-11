@@ -2,22 +2,24 @@
   margin: min(11.72vw, 118px) auto 0;
   display: grid;
   justify-content: center;
-  grid-template: repeat(2, auto) / repeat(auto-fill, 284px);
+  grid-template: repeat(2, auto) / repeat(auto-fill, minmax(max-content, 284px));
+  width: 100%;
   max-width: 1184px;
   gap: 16px;
 }
 
 .photo-grid__image {
-  width: 100%;
+  width: calc(352px - 68 * ((100vw - 768px) / 512));
+  min-width: 284px;
 }
 
 @media screen and (max-width: 768px) {
   .photo-grid {
     margin-top: 90px;
     width: 100%;
-    /* grid-template: repeat(2, auto) / repeat(
-        auto-fill,
-        minmax(284px, min(352px, 90vw))
-      ); */
+  }
+
+  .photo-grid__image {
+    max-width: calc(288px + 64 * ((100vw - 320px) / 448));
   }
 }
