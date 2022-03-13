@@ -16,7 +16,7 @@
   font-size: min(5.625vw, 72px);
   line-height: min(5.99vw, 76px);
   margin: 0;
-  max-width: min(35.93vw, 340px);
+  max-width: calc(340px + 120 * ((100vw - 768px) / 512));
   text-align: left;
   font-family: Inter, sans-serif;
   font-weight: 900;
@@ -24,15 +24,16 @@
 
 .place__artist {
   margin-top: auto;
-  max-width: 456px;
+  max-width: calc(352px + 104 * ((100vw - 768px) / 512));
 }
 
 .place__name-heading {
   margin: 0 0 8px;
   font-size: 12px;
   letter-spacing: 0.12em;
+  font-weight: 400;
   color: #aaa;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .place__name {
@@ -82,6 +83,14 @@
 @media screen and (max-width: 768px) {
   .place__paragraph {
     font-size: 16px;
+  }
+
+  .place__title {
+    max-width: calc(288px + 52 * ((100vw - 320px) / 448));
+  }
+
+  .place__artist {
+    max-width: calc(288px + 64 * ((100vw - 320px) / 448));
   }
 }
 
